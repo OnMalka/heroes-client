@@ -1,0 +1,15 @@
+$myBlue: #446B8B;
+$myLightBlue: #1bbbf0;
+$myYellow: #FFD166;
+$myRed: #d90429;
+$myGray: white;
+$myDarkGray: rgba(103, 160, 95, 0.2);
+$myYellowGray: rgba(235, 232, 91, 0.2);
+$filterWhite:  
+    invert(100%) 
+    sepia(1%) 
+    saturate(0%) 
+    hue-rotate(170deg) 
+    brightness(104%) 
+    contrast(103%);
+$mobileBreakpoint: 700px;

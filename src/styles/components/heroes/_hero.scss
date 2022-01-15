@@ -1,0 +1,176 @@
+.all-heroes-page {
+    padding-top: 5rem;
+}
+
+.hero-card {
+    width: 80vw;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 2px solid $myBlue;
+    border-radius: 5px;
+
+    p {
+        margin:0 0 0.5rem 0;
+    }
+}
+
+.hero-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-card__profile-picture {
+    width: 70%;
+    align-self: center;
+    margin-bottom: 1rem;
+}
+
+.hero-card__title {
+    width: calc(100% + 2px + 1rem);
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15%;
+    margin: {
+        top: calc(-0.5rem - 1px);
+        left: calc(-0.5rem - 1px);
+        bottom: 1rem;
+    }
+    // padding: 0 0.5rem;
+    background: $myBlue;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    h1 {
+        color: white;
+        font-size: larger;
+    }
+
+    img {
+        height: 50%;
+        filter: $filterWhite;
+    }
+}
+
+details {
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+.suit-color, .todays-trainings {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: text;
+
+    p, div {
+        display: inline-block;
+        margin: 0.2rem 0 0 1rem;
+    }
+
+    div {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+.hero-details {
+    margin-left: calc(15vw - 1rem);
+    width: 70%;
+
+    .button-container {
+        
+        button {
+            width: 100%;
+        }
+
+        .message, .error {
+            margin: 1rem 0;
+            padding: 0.5rem 0;
+            text-align: center;
+            background-color: $myBlue;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .error {
+            
+            background-color: $myRed;
+        }
+    }
+}
+
+.hero-card {
+    @media (min-width: $mobileBreakpoint) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 650px;
+        padding: 0;
+
+        .hero-card__title {
+            width: calc(100% + 2px);
+            margin: -1px;
+            margin-bottom: 1rem;
+
+            h1 {
+                font-size: x-large;
+            }
+        }
+
+        .hero-card__profile-picture {
+            width: 30%;
+            margin: 4rem 0;
+        }
+
+        .hero-details {
+            margin: 2rem 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: unset;
+            // height: calc(24vw * 1.33);
+            // max-height: 260px;
+            min-height: 420px;
+            width: 45%;
+
+            .hero-details__info {
+                // overflow: auto;
+                width: 100%;
+
+                .suit-color {
+                    padding-right: 30%;
+                }
+
+                .todays-trainings {
+                    justify-content: left;
+                }
+            }
+
+            .button-container {
+                width: 100%;
+                // flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                padding-bottom: 2rem;
+            }
+        }
+
+        .suit-color {
+            margin: 0;
+        }
+    }
+}
