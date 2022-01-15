@@ -10,9 +10,9 @@ const handleError = async (err, dispatchTrainerData, navigate, setErrorModal) =>
             break;
         default:
             setErrorModal({ message: 'Server error.  Please try again in a few minutes', showModal: true });
-            // setTimeout(() => {
-            //     setErrorModal({ message: '', showModal: false });
-            // }, 3000);
+            setTimeout(() => {
+                setErrorModal({ message: '', showModal: false });
+            }, 3000);
             break;
     };
 };
